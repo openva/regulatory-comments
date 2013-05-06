@@ -1,6 +1,6 @@
 # Regulatory Comments Scraper
 
-Extracts public comments on proposed Virginia regulations, as submitted to the [Virginia Regulatory Townhall](http://townhall.virginia.gov/), and saves each comment as a JSON file.
+Extracts public comments on proposed Virginia regulations, as submitted to the [Virginia Regulatory Townhall](http://townhall.virginia.gov/), and saves each comment as a JSON file. It does so by parsing HTML with regular expressions, which I am totally OK with and you should be, too, because it works.
 
 ## Instructions
 
