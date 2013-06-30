@@ -162,6 +162,18 @@ $min = 1;
 $max = 100000;
 
 /*
+
+/*
+ * If the output directory doesn't exist, then create it.
+ */
+else
+{
+	if (!mkdir(OUTPUT_DIR))
+	{
+		die('Could not create ' . OUTPUT_DIR . ' directory to save output.');
+	}
+}
+
  * Maintain a count of the number of failed attempts to retrieve a comment. We only really care
  * about sequential failures, to determine when we've finished indexing all comments, so we
  * reset this to 0 with each successful retrieval.
