@@ -146,7 +146,7 @@ function extract_comment($html)
 $base_url = 'http://townhall.virginia.gov/L/viewcomments.cfm?commentid=';
 
 /*
- * Define the minimum and maximum comment ID. A huge maximum number is given to avoid this from
+ * Define the minimum and maximum comment ID. A huge maximum number is given to keep this from
  * running out of control.
  */
 $min = 1;
