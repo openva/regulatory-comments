@@ -162,6 +162,18 @@ $min = 1;
 $max = 100000;
 
 /*
+ * If the output directory already exists, see what the highest-numbered file is, so that we can
+ * resume scraping where we left off.
+ */
+if (file_exists(OUTPUT_DIR))
+{
+	$files = array_slice(scandir(OUTPUT_DIR, TRUE), 0, 1);
+	$min = preg_replace('[^0-9]', '', $files[0]) + 1;
+	if ($min == '..')
+	{
+		$min = 1;
+	}
+}
 
 /*
  * If the output directory doesn't exist, then create it.
@@ -174,6 +186,7 @@ else
 	}
 }
 
+/*
  * Maintain a count of the number of failed attempts to retrieve a comment. We only really care
  * about sequential failures, to determine when we've finished indexing all comments, so we
  * reset this to 0 with each successful retrieval.
