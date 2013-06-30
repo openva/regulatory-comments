@@ -1,5 +1,9 @@
 <?php
 
+/*
+ * The directory to which we're saving the JSON files, one per comment.
+ */
+define('OUTPUT_DIR', 'json');
 date_default_timezone_set('America/New_York');
 
 /*
@@ -208,7 +212,7 @@ for ($i = $min; $i <= $max; $i++)
 		/*
 		 * Write the comment JSON to a file.
 		 */
-		file_put_contents('json/' . str_pad($i, 5, '0', STR_PAD_LEFT) . '.json', $comment);
+		file_put_contents(OUTPUT_DIR . '/' . str_pad($i, 5, '0', STR_PAD_LEFT) . '.json', $comment);
 		
 		/*
 		 * Set our count of consecutive failures to 0, since we just had a successful download.
