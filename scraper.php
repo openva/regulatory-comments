@@ -4,6 +4,11 @@
  * The directory to which we're saving the JSON files, one per comment.
  */
 define('OUTPUT_DIR', 'json');
+
+/*
+ * Our time zone. (This is, of course, EST, but we have to define this to keep PHP from
+ * complaining.)
+ */
 date_default_timezone_set('America/New_York');
 
 /*
