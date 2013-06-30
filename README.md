@@ -4,7 +4,7 @@ Extracts public comments on proposed Virginia regulations, as submitted to the [
 
 ## Instructions
 
-0. Run at the command line: `php parser.php`.
+0. Run at the command line: `php scraper.php`
 0. There is no step 2.
 
 ## To Do
